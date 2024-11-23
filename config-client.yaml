@@ -2,4 +2,4 @@ spring:
   cloud:
     config:
       allow-override: true
-      override-none: false
+      override-none: true
