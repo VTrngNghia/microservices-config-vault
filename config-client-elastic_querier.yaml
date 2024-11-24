@@ -1,0 +1,30 @@
+elastic-searcher:
+  version: v1
+
+server:
+  port: 8183
+  servlet:
+    context-path: /elastic-searcher
+
+elastic-query-config:
+  text-field: text
+
+elastic-config:
+  index-name: twitter-index
+  connection-url: ${ELASTICSEARCH_URL:localhost:9200}
+  connect-timeout-ms: 5000
+  socket-timeout-ms: 30000
+
+user-config:
+  username: demo
+  password: demo
+  roles: USER
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+security:
+  paths-to-ignore: /api-docs
